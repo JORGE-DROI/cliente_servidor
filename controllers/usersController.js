@@ -8,7 +8,7 @@ controller.getLogin = (req,res) =>{
         id:req.body.id,
         time : new Date().getTime()
     };
-    const token = jwt.sign({user},db.secret_key , {expiresIn:"2m"});
+    const token = jwt.sign({user},db.secret_key , {expiresIn:"7m"});
     format.code = 200;
     format.message = "token";
     format.success = true;
